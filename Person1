@@ -1,0 +1,20 @@
+package com.java.task2;
+
+public class Person1 {
+    int age;
+    String name;
+     Person1(String name){
+         this.age=18;
+         this.name= name;
+    }
+    void display(){
+        System.out.println("Name of the person : "+ name + ", Age of the person : "+ age);
+
+    }
+    public static void main(String[] args) {
+        Person1 obj1 = new Person1("Shameer");
+        obj1.display();
+
+
+    }
+}
