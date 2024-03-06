@@ -1,0 +1,40 @@
+package com.java.task2;
+
+public class Account {
+    double balance;
+    public Account() {
+
+    }
+    public Account(double balance) {
+        this.balance = balance;
+    }
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Amount deposited : " + amount + " ,"+" Current balance: " + balance);
+        } else {
+            System.out.println("Invalid deposit amount");
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Amount Withdrawn : " + amount + " , Current balance : " + balance);
+        } else {
+            System.out.println("Insufficient or invalid withdrawal amount.");
+        }
+    }
+    public void displayBalance() {
+        System.out.println("Current balance: " + balance);
+    }
+    public static void main(String[] args) {
+        Account acc1 = new Account(1000);
+        acc1.deposit(500);
+        acc1.withdraw(2000);
+        acc1.displayBalance();
+    }
+}
+//output
+Amount deposited : 500.0 , Current balance: 1500.0
+Amount Withdrawn : 200.0 , Current balance : 1300.0
+Current balance: 1300.0
