@@ -1,0 +1,38 @@
+package com.java.task2;
+class Person{
+
+    String name;
+    int age;
+    public Person(String name , int age){
+        this.name=name;
+        this.age=age;
+
+    }
+}
+class Employee extends Person{
+    int empId;
+    double salary;
+    public Employee(String name,int age,int empId,double salary){
+        super(name, age);
+        this.empId=empId;
+        this.salary=salary;
+
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Shameer",21,6093,75000);
+        System.out.println("Details of the employee : ");
+        System.out.println("Name : "+emp.name);
+        System.out.println("Age : "+emp.age);
+        System.out.println("Employee id : "+emp.empId);
+        System.out.println("Salary : "+emp.salary);
+    }
+}
+//output
+Details of the employee : 
+Name : Shameer
+Age : 21
+Employee id : 6093
+Salary : 75000.0
